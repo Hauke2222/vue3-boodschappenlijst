@@ -3,6 +3,9 @@ export default class Grocery {
     this.name = name;
     this.price = price;
     this.quantity = quantity;
-    this.subTotal = (this.price * this.quantity).toFixed(2);
+  }
+
+  get subTotal() {
+    return (this.quantity * this.price).toFixed(2);
   }
 }
