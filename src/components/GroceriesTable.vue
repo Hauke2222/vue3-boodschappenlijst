@@ -5,7 +5,7 @@
         <td>Naam</td>
         <td>Prijs</td>
         <td>Aantal</td>
-        <td>Totaal</td>
+        <td class="align-right">Totaal</td>
       </tr>
     </thead>
     <tbody>
@@ -20,13 +20,13 @@
             v-model="grocery.quantity"
           />
         </td>
-        <td>€ {{ grocery.subTotal }}</td>
+        <td class="align-right">€ {{ grocery.subTotal }}</td>
       </tr>
       <tr>
         <td><b>Totaal:</b></td>
         <td>-</td>
         <td></td>
-        <td id="totalCost">
+        <td class="total-cost align-right">
           <b>{{ "€" + totalPrice }}</b>
         </td>
       </tr>
@@ -54,17 +54,20 @@ const totalPrice = computed(() => {
 
 <style>
 table {
-  border: 1px solid black;
-  text-align: center;
+  border: 2px solid lightgray;
+  text-align: left;
   margin-left: auto;
   margin-right: auto;
 }
 th,
 td {
   border: 1px solid lightgray;
-  text-align: center;
+  text-align: left;
 }
-#totalCost {
+.total-cost {
   background-color: lightgray;
+}
+.align-right {
+  text-align: right;
 }
 </style>

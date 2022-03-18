@@ -1,4 +1,6 @@
 <template>
+  <h1>Vue3 boodschappenlijst</h1>
+  <br />
   <groceries-table />
 </template>
 
